@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yprogramming.ichat.ChatDetailActivity">
+
+    <include layout="@layout/ichat_app_bar" android:id="@+id/ichChatDetailToolBar" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgChatProfile"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="3dp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgOnline"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_alignBottom="@+id/imgChatProfile"
+        android:layout_alignStart="@+id/imgChatProfile"
+        android:src="@android:color/holo_green_light"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ichChatDetailToolBar"
+        android:orientation="vertical"
+        android:weightSum="1">
+        <com.github.bassaer.chatmessageview.views.ChatView
+            android:id="@+id/mChatView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></com.github.bassaer.chatmessageview.views.ChatView>
+    </LinearLayout>
+
+</RelativeLayout>

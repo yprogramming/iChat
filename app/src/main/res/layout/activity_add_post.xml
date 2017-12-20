@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yprogramming.ichat.AddPostActivity">
+
+    <include
+        android:id="@+id/ichAddPostToolBar"
+        layout="@layout/ichat_app_bar"
+        android:layout_width="match_parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ichAddPostToolBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/imgPost"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@+id/ichAddPostToolBar"
+                android:layout_centerHorizontal="true"
+                app:srcCompat="@android:drawable/ic_menu_camera" />
+
+            <EditText
+                android:id="@+id/txtTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/imgPost"
+                android:layout_below="@+id/imgPost"
+                android:layout_marginTop="14dp"
+                android:ems="10"
+                android:hint="ຫົວຂໍ້"
+                android:inputType="textPersonName"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/lblTitle"
+                android:layout_below="@+id/lblTitle"
+                android:ems="10"
+                android:gravity="top|left"
+                android:hint="ລາຍລະອຽດ"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:minLines="4"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btnSavePost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="bottom"
+                android:background="@color/colorPrimary"
+                android:text="ບັນທືກ"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

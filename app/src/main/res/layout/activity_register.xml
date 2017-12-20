@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yprogramming.ichat.RegisterActivity">
+
+    <include layout="@layout/ichat_app_bar" android:id="@+id/ichRegisterChatToolBar" />
+
+    <EditText
+        android:id="@+id/txtPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="ເບີໂທລະສັບ"
+        android:inputType="number"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:textSize="20sp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/txtCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txtPhoneNumber"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="ລະຫັດຢຶນຢັນ"
+        android:inputType="number"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:textSize="20sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btnVerify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtCode"
+        android:background="@color/colorAccent"
+        android:ems="10"
+        android:text="ຢືນຢັນລະຫັດເຂົ້າສູ່ລະບົບ"
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btnNoCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btnVerify"
+        android:layout_marginTop="3dp"
+        android:background="@color/colorAccent"
+        android:ems="10"
+        android:text="ຍັງບໍ່ໄດ້ຮັບລະຫັດຢືນຢັນ"
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="14dp"
+        android:layout_marginEnd="14dp"
+        android:background="@color/colorAccent"
+        android:text="ສະຫມັກ"
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/lblTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:text="ສະຫມັກໃຊ້ແອັບດ້ວຍເບີໂທລະສັບ"
+        android:textAlignment="center"
+        android:textSize="16sp" />
+</RelativeLayout>
